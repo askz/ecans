@@ -1,0 +1,23 @@
+= form_for(@can) do |f|
+  - if @can.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@can.errors.count, "error")
+        prohibited this can from being saved:
+      %ul
+        - @can.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :price
+    %br/
+    = f.text_field :price
+  .field
+    = f.label :qua
+    %br/
+    = f.text_field :qua
+  .actions
+    = f.submit

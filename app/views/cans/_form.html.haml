@@ -1,0 +1,9 @@
+= simple_form_for(@can) do |f|
+  = f.input :uid, as: :string
+  = f.input :name, input_html: {size: 50}
+  = f.input :price
+  = f.input :qua
+  = f.submit
+
+%script
+  $('input:eq(0)').focus()

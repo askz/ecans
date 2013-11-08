@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @can.name
+%p
+  %strong Price:
+  = @can.price
+%p
+  %strong Qua:
+  = @can.qua
+= link_to 'Edit', edit_can_path(@can)
+|
+\#{link_to 'Back', cans_path}

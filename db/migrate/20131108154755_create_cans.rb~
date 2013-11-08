@@ -1,0 +1,11 @@
+class CreateCans < ActiveRecord::Migration
+  def change
+    create_table :cans do |t|
+      t.string :name
+      t.int :price
+      t.int :qua
+
+      t.timestamps
+    end
+  end
+end

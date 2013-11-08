@@ -1,0 +1,23 @@
+%h1 Listing cans
+%table
+  %thead
+    %tr
+      %th UID
+      %th Name
+      %th Price
+      %th Qua
+      %th
+      %th
+      %th
+  %tbody
+    - @cans.each do |can|
+      %tr
+        %td= can.uid
+        %td= can.name
+        %td= can.price
+        %td= can.qua
+        %td= link_to 'Show', can
+        %td= link_to 'Edit', edit_can_path(can)
+        %td= link_to 'Destroy', can, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Can', new_can_path
